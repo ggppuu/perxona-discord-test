@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Perxona · Discord Activity</title>
+    <script type="module" crossorigin src="./assets/index-C528Sjbo.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-bYjQkaQA.css">
+  </head>
+  <body>
+    <div id="app">
+      <header><div class="brand">perxona<span>DISCORD ACTIVITY · ALPHA</span></div><span id="environment" class="pill">初始化中</span></header>
+      <main>
+        <section class="intro">
+          <span class="eyebrow">YOUR COMMUNITY, WITH A CHARACTER</span>
+          <h1>讓社群角色<br />開口跟你聊。</h1>
+          <p>開始一段與 3D 角色的對話，認識社群，也認識彼此。</p>
+          <button id="start" class="primary" disabled>開始對話 <span>↗</span></button>
+          <button id="external" class="secondary">開啟 Live Link</button>
+          <p id="hint" class="hint" aria-live="polite">正在準備測試環境…</p>
+        </section>
+        <section class="stage" aria-label="角色對話區">
+          <div class="stage-heading"><span>角色空間</span><span id="agent-status" class="pill">尚未啟動</span></div>
+          <div id="agent-mount"><div class="empty"><div class="orb" aria-hidden="true">P</div><h2>你的角色，即將登場</h2><p>按下「開始對話」載入 Perxona。</p></div></div>
+        </section>
+      </main>
+      <details id="diagnostics">
+        <summary>測試診斷與設定</summary>
+        <div class="diagnostics-body"><p>SDK 連線與 Widget 註冊成功，不代表 Agent 已連線。請確認角色能回答後，再勾選下方項目。</p>
+          <dl><dt>目前 Origin</dt><dd id="origin"></dd><dt>Application ID</dt><dd id="app-id"></dd><dt>Agent Profile ID</dt><dd id="profile-id"></dd></dl>
+          <div class="checklist"><label><input type="checkbox" /> 角色可見</label><label><input type="checkbox" /> 文字對話成功</label><label><input type="checkbox" /> 語音輸入／輸出成功</label></div>
+          <button id="copy" class="secondary">複製診斷紀錄</button><pre id="log" aria-live="polite"></pre>
+        </div>
+      </details>
+      <footer>第一版為各自獨立的對話工作階段。尚未接入群組共聊、會員與收費。</footer>
+    </div>
+  </body>
+</html>
